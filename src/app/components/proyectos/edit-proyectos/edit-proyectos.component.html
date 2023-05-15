@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="form-container">
+      <form novalidate #f="ngForm">
+        <h2 class="mt-4 mb-3 text-center">Modificar el proyecto</h2>
+        <div class="mb-3">
+          <label for="nombreProyecto" class="form-label">Nombre del proyecto</label>
+          <input type="text" id="nombreProyecto" name="nombreProyecto" class="form-control" placeholder="Ejemplo: Calculadora básica" [(ngModel)]="proyectos.nombreProyecto" required />
+        </div>
+        <div class="mb-3">
+          <label for="urlRepo" class="form-label">URL del repositorio</label>
+          <input type="url" id="urlRepo" name="urlRepo" class="form-control" placeholder="Coloque la URL" [(ngModel)]="proyectos.urlRepo" required />
+        </div>
+        <div class="mb-3">
+          <label for="urlDeploy" class="form-label">URL del deploy</label>
+          <input type="url" id="urlDeploy" name="urlDeploy" class="form-control" placeholder="Coloque la URL" [(ngModel)]="proyectos.urlDeploy" required />
+        </div>
+        <div class="mb-3">
+          <label for="imgProyecto" class="form-label">Imagen</label>
+          <input type="url" id="imgProyecto" name="imgProyecto" class="form-control" placeholder="Coloque la URL" [(ngModel)]="proyectos.imgProyecto" required />
+        </div>
+        <div class="mb-3">
+          <label for="descripcionProyecto" class="form-label">Descripción del proyecto</label>
+          <textarea id="descripcionProyecto" name="descripcionProyecto" class="form-control" placeholder="Ejemplo: Desarrollé con JS Vanilla una calculadora..." maxlength="1000" [(ngModel)]="proyectos.descripcionProyecto" required></textarea>
+        </div>
+        <div class="text-center">
+          <button mat-button (click)="onNoClick()" class="btn btn-secondary mx-3">Cancelar</button>
+          <button cdkFocusInitial class="btn btn-primary" (click)="onUpdate(data.id)">Actualizar</button>
+        </div>
+      </form>
+    </div>
+</div>
+  

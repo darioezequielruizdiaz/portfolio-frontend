@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="form-container">
+      <form novalidate #f="ngForm">
+        <h2 class="mt-4 mb-3 text-center">Modificar tus datos</h2>
+        <div class="mb-3">
+          <label for="nombrePersona" class="form-label">Tu nombre completo</label>
+          <input type="text" id="nombrePersona" name="nombrePersona" class="form-control" placeholder="Ej: Luis Perez" [(ngModel)]="persona.nombrePersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="puestoPersona" class="form-label">Puesto o cargo que ocupas</label>
+          <input type="text" id="puestoPersona" name="puestoPersona" class="form-control" placeholder="Ej: Diseñador Multimedia" [(ngModel)]="persona.puestoPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="ubicacionPersona" class="form-label">Ciudad de residencia</label>
+          <input type="text" id="ubicacionPersona" name="ubicacionPersona" class="form-control" placeholder="Cataluña" [(ngModel)]="persona.ubicacionPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="imgPersona" class="form-label">URL de tu foto de perfil</label>
+          <input type="url" id="imgPersona" name="imgPersona" class="form-control" placeholder="Coloca la URL" [(ngModel)]="persona.imgPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="imgPersona" class="form-label">URL de tu foto de portada</label>
+          <input type="url" id="imgFondo" name="imgFondo" class="form-control" placeholder="Coloca la URL" [(ngModel)]="persona.imgFondo" required />
+        </div>
+        <div class="mb-3">
+          <label for="telPersona" class="form-label">Teléfono</label>
+          <input type="tel" id="telPersona" name="telPersona" class="form-control" placeholder="1120303456" [(ngModel)]="persona.telPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="emailPersona" class="form-label">Email</label>
+          <input type="email" id="emailPersona" name="emailPersona" class="form-control" placeholder="mail@ejemplo.com" [(ngModel)]="persona.emailPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="githubPersona" class="form-label">Github</label>
+          <input type="url" id="githubPersona" name="githubPersona" class="form-control" placeholder="Carga la URL" [(ngModel)]="persona.githubPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="linkedinPersona" class="form-label">Linkedin</label>
+          <input type="url" id="linkedinPersona" name="linkedinPersona" class="form-control" placeholder="Carga la URL" [(ngModel)]="persona.linkedinPersona" required />
+        </div>
+        <div class="mb-3">
+          <label for="sobreMi" class="form-label">Descripción de ti</label>
+          <textarea id="sobreMi" name="sobreMi" class="form-control" maxlength="1000" placeholder="Ej: Soy una persona proactiva que busca..." [(ngModel)]="persona.sobreMi" required></textarea>
+        </div>
+        <div class="text-center">
+            <button mat-button (click)="onNoClick()" class="btn btn-secondary mx-3">Cancelar</button>
+            <button cdkFocusInitial class="btn btn-primary" (click)="onUpdate(data.id)">Actualizar</button>
+        </div>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<form novalidate #f="ngForm">
+    <h2 mat-dialog-title class="text-center fs-3 fw-normal">Cargar nuevo habilidad</h2>
+    <div class="form-container">
+        <div class="mb-3">
+            <label for="nombreSkill" class="form-label">Nombre de la habilidad</label>
+            <input class="form-control" type="text" id="nombreSkill" name="nombreSkill" placeholder="Ejemplo: Ingles" [(ngModel)]="nombreSkill" required />
+        </div>
+        <div class="mb-3 d-flex justify-content-between me-3">
+            <label for="porcentajeSkill" class="form-label pt-2">Nivel de habilidad</label>
+            <mat-slider thumbLabel [displayWith]="formatLabel" step="5" min="0" max="100" aria-label="units" id="porcentajeSkill" name="porcentajeSkill" [(ngModel)]="porcentajeSkill" required></mat-slider>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+            <label for="colorSkill" class="color-skills" class="form-label pt-2">Aplica un color a la habilidad</label>
+            <input type="color" id="colorSkill" name="colorSkill" [(ngModel)]="colorSkill" required />
+        </div>
+    </div>
+    <div mat-dialog-actions class="d-flex justify-content-center">
+            <button class="px-3" mat-button (click)="onNoClick()" class="btn btn-secondary mx-3">Cancelar</button>
+            <button cdkFocusInitial class="btn btn-primary" (click)="onCreate()">Enviar</button>
+    </div>
+  </form>
+  

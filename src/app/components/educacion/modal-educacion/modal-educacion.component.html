@@ -1,0 +1,36 @@
+ <div class="container">
+    <div class="form-container">
+      <form novalidate #f="ngForm">
+        <h2 class="mt-4 mb-3 text-center">Cargar nueva educación</h2>
+        <div class="mb-3">
+          <label for="nombreEducacion" class="form-label">Carrera</label>
+          <input type="text" id="nombreEducacion" name="nombreEducacion" class="form-control" placeholder="Ejemplo: Abogado" [(ngModel)]="nombreEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="establecimiento" class="form-label">Nombre de la institución</label>
+          <input type="text" id="establecimiento" name="establecimiento" class="form-control" placeholder="Ejemplo: Google" [(ngModel)]="establecimiento" required/>
+        </div>
+        <div class="mb-3">
+          <label for="startEducacion" class="form-label">Fecha de inicio</label>
+          <input type="number" id="startEducacion" name="startEducacion" class="form-control" placeholder="Sólo el año" [(ngModel)]="startEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="endEducacion" class="form-label">Fecha de fin</label>
+          <input type="text" id="endEducacion" name="endEducacion" class="form-control" placeholder="Año o 'Actualidad'" [(ngModel)]="endEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="imgEducacion" class="form-label">Imagen</label>
+          <input type="url" id="imgEducacion" name="imgEducacion" class="form-control" placeholder="Carga la URL" [(ngModel)]="imgEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="descripcionEducacion" class="form-label">Descripción del estudio</label>
+          <textarea id="descripcionEducacion" name="descripcionEducacion" class="form-control" placeholder="Ejempo: Carrera de grado superior en..." maxlength="1000" [(ngModel)]="descripcionEducacion" required></textarea>
+        </div>
+        <div class="text-center">
+          <button mat-button (click)="onNoClick()" class="btn btn-secondary mx-3">Cancelar</button>
+          <button cdkFocusInitial class="btn btn-primary send-button" (click)="onCreate()">Enviar</button>
+        </div>
+      </form>
+    </div>
+</div>
+  

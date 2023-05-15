@@ -1,0 +1,31 @@
+<section class="card col-lg-6 mx-auto mt-5 p-5 shadow">
+    <div class="d-flex justify-content-between">
+        <p class="fs-3 fw-bold">Hard y soft skills</p>
+        <i class="fa-solid fa-plus" mat-button (click)="openDialogNew()" *ngIf="isLogged"></i>
+    </div>
+    <div class="row mx-5">
+        <div class="col-md-5 m-3" *ngFor="let skill of skills">
+          <div class="skill d-flex flex-column text-center my-3">
+            <div class="pe-5">
+                <i class="fa-solid fa-pen px-3" *ngIf="isLogged" (click)="openDialogEdit(skill.id)"></i>
+                <i class="fa-solid fa-trash text-danger" *ngIf="isLogged" (click)="delete(skill.id)"></i>
+            </div>
+            <circle-progress
+              [percent]="skill.porcentajeSkill" 
+              [radius]="100" 
+              [outerStrokeWidth]="16" 
+              [innerStrokeWidth]="8"
+              [outerStrokeColor]="skill.colorSkill" 
+              [innerStrokeColor]="'false'" 
+              [showSubtitle]="false"
+              [titleFontSize]="'40'" 
+              [animation]="true" 
+              [animationDuration]="600">
+            </circle-progress>
+            <div class="mt-0">
+                <p class="fs-3 text-break pe-5">{{skill.nombreSkill}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>

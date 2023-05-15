@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="form-container d-flex flex-column">
+      <form novalidate #f="ngForm">
+        <h2 class="mt-4 mb-3 text-center">Cargar nueva experiencia</h2>
+        <div class="d-flex flex-column form-floating">
+            <div class="mb-3">
+                <label for="nombreExperiencia" class="form-label">Nombre del puesto</label>
+                <input class="form-control" type="text" id="nombreExperiencia" name="nombreExperiencia" placeholder="Ejemplo: Gerente" [(ngModel)]="nombreExperiencia" required />
+            </div>
+            <div class="mb-3">
+                <label for="compania" class="form-label">Nombre de la empresa</label>
+                <input class="form-control" type="text" id="compania" name="compania" placeholder="Ejemplo: Google" [(ngModel)]="compania" required />
+            </div>
+            <div class="mb-3">
+                <label for="startExp" class="form-label">Fecha de inicio</label>
+                <input class="form-control" type="number" id="startExp" name="startExp" placeholder="Sólo el año" [(ngModel)]="startExp" required />
+            </div>
+            <div class="mb-3">
+                <label for="endExp" class="form-label">Fecha de fin</label>
+                <input class="form-control" type="text" id="endExp" name="endExp" placeholder="Año o 'Actualidad'" [(ngModel)]="endExp" required />
+            </div>
+            <div class="mb-3">
+                <label for="imgExp" class="form-label">Imagen</label>
+                <input class="form-control" type="url" id="imgExp" name="imgExp" placeholder="Coloque la URL" [(ngModel)]="imgExp" required />
+            </div>
+            <div class="mb-3">
+                <label for="descripcionExperiencia" class="form-label">Descripción de las tareas</label>
+                <textarea class="form-control" id="descripcionExperiencia" name="descripcionExperiencia" placeholder="Ejemplo: Desarrollé una app para Google" maxlength="1000" [(ngModel)]="descripcionExperiencia" required></textarea>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+          <button class="btn btn-outline-primary" mat-button (click)="onNoClick()">Cancelar</button>
+          <button class="btn btn-primary" cdkFocusInitial (click)="onCreate()">Enviar</button>
+        </div>
+      </form>
+    </div>
+</div>
+  

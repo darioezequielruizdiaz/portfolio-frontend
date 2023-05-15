@@ -1,0 +1,38 @@
+<section class="mx-auto card text-center col-lg-6 acerca-de pb-5 shadow">
+    <div class="descripcion pt-5">
+        <span *ngIf="persona.imgPersona; else noImage">
+            <img [src]="persona.imgPersona" alt="Foto de perfil" class="foto-perfil border border-5 border-light rounded-circle position-absolute top-0 start-50 translate-middle">
+        </span>
+        <ng-template #noImage>
+            <div class="no-imagen border border-5 border-light rounded-circle position-absolute top-0 start-50 translate-middle bg-secondary">
+                <i class="fa-solid fa-user text-light"></i>
+            </div>
+        </ng-template>
+        <div class="mt-5">
+            <p class="display-5 fw-bold mb-0 pt-3"><strong>{{persona.nombrePersona}}</strong></p>
+            <p class="fs-3 mb-0 text-secondary">{{persona.puestoPersona}}</p>
+            <p class="location fs-4 mb-0 text-primary">{{persona.ubicacionPersona}}</p>
+        </div>
+        <div class="d-block d-md-none mt-4">
+            <!--Whatsapp-->
+            <a href="https://api.whatsapp.com/send?phone=+54{{persona.telPersona}}&text=%C2%A1Hola%20Federico!%20Me%20gustar%C3%ADa%20ponerme%20en%20contacto%20para%20conocer%20m%C3%A1s%20sobre%20tu%20trabajo" target="_blank">
+                <i class="fa-brands fa-whatsapp text-success fs-1 mx-3"></i>
+            </a>
+            <!--Github-->
+            <a href="{{persona.githubPersona}}" id="profile-link" target="_blank">
+                <i class="fa-brands fa-github text-dark fs-1 mx-3"></i>
+            </a>
+            <!--Linkedin-->
+            <a href="{{persona.linkedinPersona}}" target="_blank">
+                <i class="fa-brands fa-linkedin text-primary fs-1 mx-3"></i>
+            </a>
+          </div>
+    </div>
+    <div class="mt-5">
+        <div class="mx-5">
+            <h3>Sobre mí</h3>
+            <p class="text-justify text-left">{{persona.sobreMi}}</p>
+        </div>
+    </div>
+    <i class="fa-solid fa-pen position-absolute top-0 end-0 mt-3 me-3" *ngIf="isLogged" (click)="openDialogEdit()"></i>
+</section>

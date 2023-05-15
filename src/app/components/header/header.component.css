@@ -1,0 +1,14 @@
+@media (max-width: 750px) {
+
+  .logo-arg {
+    width: 110px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .logo-arg {
+    width: 110px;
+  }
+}

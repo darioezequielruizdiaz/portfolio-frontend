@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="form-container">
+      <form novalidate #f="ngForm">
+        <h2 class="mt-4 mb-3 text-center">Modificar la educación</h2>
+        <div class="mb-3">
+          <label for="nombreEducacion" class="form-label">Carrera</label>
+          <input type="text" id="nombreEducacion" name="nombreEducacion" class="form-control" placeholder="Ejemplo: Ing. Sistemas" [(ngModel)]="educacion.nombreEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="establecimiento" class="form-label">Nombre de la institución</label>
+          <input type="text" id="establecimiento" name="establecimiento" class="form-control" placeholder="Ejemplo: Universidad Nacional de Buenos aires" [(ngModel)]="educacion.establecimiento" required/>
+        </div>
+        <div class="mb-3">
+          <label for="startEducacion" class="form-label">Fecha de inicio</label>
+          <input type="number" id="startEducacion" name="startEducacion" class="form-control" placeholder="Sólo el año" [(ngModel)]="educacion.startEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="endEducacion" class="form-label">Fecha de fin</label>
+          <input type="text" id="endEducacion" name="endEducacion" class="form-control" placeholder="Año o 'Actualidad'" [(ngModel)]="educacion.endEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="imgEducacion" class="form-label">Imagen</label>
+          <input type="url" id="imgEducacion" name="imgEducacion" class="form-control" placeholder="Coloque la URL" [(ngModel)]="educacion.imgEducacion" required/>
+        </div>
+        <div class="mb-3">
+          <label for="descripcionEducacion" class="form-label">Descripción del estudio</label>
+          <textarea id="descripcionEducacion" name="descripcionEducacion" class="form-control" placeholder="Coloqué la descripción aqui" maxlength="1000" [(ngModel)]="educacion.descripcionEducacion" required></textarea>
+        </div>
+        <div class="text-center">
+          <button mat-button (click)="onNoClick()" class="btn btn-secondary mx-3">Cancelar</button>
+          <button cdkFocusInitial class="btn btn-primary" (click)="onUpdate(data.id)">Actualizar</button>
+        </div>
+      </form>
+    </div>
+</div>
+  

@@ -1,0 +1,17 @@
+.acerca-de {
+    margin-top: 12rem;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.no-imagen {
+    width: 200px;
+    height: 200px;
+    font-size: 120px;
+}
+
+

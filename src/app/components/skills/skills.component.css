@@ -1,0 +1,13 @@
+@import url(../experiencia/experiencia.component.css);
+
+/* Skills */
+
+circle-progress{
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.skill {
+  min-width: 250px;
+}
